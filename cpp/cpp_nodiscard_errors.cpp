@@ -1,21 +1,33 @@
-#include <iostream>
+#include <string_view>
 
-class SimpleType
-{
-private:
-	int a { 1 };    // << wow!
-	int b { 1 };    // << wow2!
-	std::string name { "string" }; // wow3!
-
-public:
-	SimpleType() {
-		std::cout << "SimpleType::ctor, {" << a << ", " << b << ", \"" << name << "\"}\n";
-	}
-
-	~SimpleType() { std::cout << "SimpleType::destructor\n"; }
+enum class [[nodiscard]] ErrorCode {
+    OK,
+    Fatal,
+    System,
+    FileIssue
 };
+
+ErrorCode OpenFile(std::string_view fileName) 
+{ 
+    return ErrorCode::OK; 
+}
+
+ErrorCode SendEmail(std::string_view sendto, std::string_view text) 
+{ 
+    return ErrorCode::OK; 
+}
+
+ErrorCode SystemCall(std::string_view text) {
+	return ErrorCode::OK; 
+}
 
 int main()
 {
-	SimpleType simpleObj;
+    if (OpenFile("test.txt") != ErrorCode::OK)
+        return 1;
+        
+    if (SendEmail("joe", "hello") != ErrorCode::OK)
+        return 1;   
+        
+    SystemCall("cd ..");
 }
