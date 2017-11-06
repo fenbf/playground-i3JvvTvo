@@ -3,15 +3,15 @@
 [[nodiscard]] int Compute() { return 0; }
 
 // mark the whole type:
-[[nodiscard]] struct SuperImportantType { }
+[[nodiscard]] struct SuperImportantType { };
 SuperImportantType CalcSuperImportant() { 
-	return SuperImportantType;
+	return SuperImportantType();
 }
 SuperImportantType OtherFoo() { 
-	return SuperImportantType;
+	return SuperImportantType();
 }
 SuperImportantType CalcType() { 
-	return SuperImportantType;
+	return SuperImportantType();
 }
 
 int main()
