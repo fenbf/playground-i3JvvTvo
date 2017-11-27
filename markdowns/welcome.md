@@ -225,7 +225,7 @@ For now, Core Guidelines also doesn't mention anything about `[[attribs]]`, but 
 References
 
 * [Proposal of unused, nodiscard and fallthrough attributes.](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0068r0.pdf)
-* [C++ Weekly - Ep 30 - C++17's nodiscard Attribute](https://www.youtube.com/watch?v=l_5PF3GQLKc)
+* Jason Turner: [C++ Weekly - Ep 30 - C++17's nodiscard Attribute](https://www.youtube.com/watch?v=l_5PF3GQLKc)
 * [C++17 in detail: Attributes](http://www.bfilipek.com/2017/07/cpp17-in-details-attributes.html)
 
 ### Call to action:
